@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "My Awesome Site"
+title                    : "Website"
 title_separator          : "-"
 name                     : "Brian C. Seymour"
 description              : "A website in process by Brian."
