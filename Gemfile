@@ -24,6 +24,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jemoji"
 #   gem "jekyll-data"
    # gem  "jekyll-archives"
+   gem 'jekyll-font-awesome-sass'
    gem "jekyll-include-cache"
 #
 # If you have any other plugins, put them here!

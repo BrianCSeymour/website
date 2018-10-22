@@ -89,7 +89,7 @@ og_image                 : # Open Graph/Twitter default site image
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:              # An array of links to social media profiles
 
 # Analytics
 analytics:
@@ -99,53 +99,55 @@ analytics:
     anonymize_ip         : # true, false (default)
 
 
+
+
 # Site Author
 author:
-  name             : "Brian C. Seymour"
-  avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Hi, I am an 4th year physics major at University of Virginia interested in gravity. I'm still working on this site."
-  location         : "Charlottesville, Virginia"
+  name             :  "Brian C. Seymour"
+  avatar           :  "/assets/images/bio-photo.jpg"
+  bio              :  "Hi, I am an 4th year physics major at University of Virginia interested in gravity. I'm still working on this site."
+  location         :  "Charlottesville, Virginia"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label:          "Email"
+      icon:           "fas fa-fw fa-envelope-square"
+      url:            mailto:seymour.brianc@gmail.com
+    - label:          "Website"
+      icon:           "fas fa-fw fa-link"
+      # url:          "https://your-website.com"
+    - label:          "Twitter"
+      icon:           "fab fa-fw fa-twitter-square"
+      # url:          "https://twitter.com/"
+    - label:          "Facebook"
+      icon:           "fab fa-fw fa-facebook-square"
+      # url:          "https://facebook.com/"
+    - label:          "GitHub"
+      icon:           "fab fa-fw fa-github"
+      url:            "https://github.com/mmistakes"
+    - label:          "Instagram"
+      icon:           "fab fa-fw fa-instagram"
+      # url:          "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    - label:          "Twitter"
+      icon:           "fab fa-fw fa-twitter-square"
       # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    - label:          "Facebook"
+      icon:           "fab fa-fw fa-facebook-square"
       # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+    - label:          "GitHub"
+      icon:           "fab fa-fw fa-github"
+      # url:          "https://github.com/BrianCSeymour"
+    - label:          "GitLab"
+      icon:           "fab fa-fw fa-gitlab"
       # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    - label:          "Bitbucket"
+      icon:           "fab fa-fw fa-bitbucket"
       # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    - label:          "Instagram"
+      icon:           "fab fa-fw fa-instagram"
       # url:
 
 
@@ -182,41 +184,41 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding:             "utf-8"
+markdown_ext:         "markdown,mkdown,mkdn,mkd,md"
 
 
 # Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
+markdown:             kramdown
+highlighter:          rouge
+lsi:                  false
+excerpt_separator:    "\n\n"
+incremental:          false
 
 
 # Markdown Processing
 kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  input:              GFM
+  hard_wrap:          false
+  auto_ids:           true
+  footnote_nr:        1
+  entity_output:      as_char
+  toc_levels:         1..6
+  smart_quotes:       lsquo,rsquo,ldquo,rdquo
+  enable_coderay:     false
 
 
 # Sass/SCSS
 sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  sass_dir:           _sass
+  style:              compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink:            /:categories/:title/
+paginate:             5 # amount of posts to show
+paginate_path:        /page:num/
+timezone:             # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -249,42 +251,42 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
-  path: /categories/
+  type:               liquid
+  path:               /categories/
 tag_archive:
-  type: liquid
-  path: /tags/
+  type:               liquid
+  path:               /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
 #     - categories
 #     - tags
 #   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
+#     category:       archive-taxonomy
+#     tag:            archive-taxonomy
 #   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+#     category:       /categories/:name/
+#     tag:            /tags/:name/
 
 
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:
-  clippings: all
+  clippings:          all
   ignore:
-    envs: development
+    envs:             development
 
 
 # Defaults
 defaults:
   # _posts
   - scope:
-      path: ""
-      type: posts
+      path:           ""
+      type:           posts
     values:
-      layout: single
+      layout:         single
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      read_time:      true
+      comments:       true
+      share:          true
+      related:        true
