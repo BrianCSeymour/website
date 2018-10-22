@@ -2,6 +2,10 @@
 main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+   - title: "About"
+     url: /about/
+   - title: "Presentations"
+     url: /presentations/
    - title: "CV"
      url: /assets/documents/CV_BrianSeymour.pdf
   # - title: "Sample Posts"

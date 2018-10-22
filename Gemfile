@@ -23,6 +23,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jekyll-feed"
 #   gem "jemoji"
 #   gem "jekyll-data"
+   # gem  "jekyll-archives"
    gem "jekyll-include-cache"
 #
 # If you have any other plugins, put them here!
