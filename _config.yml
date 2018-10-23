@@ -107,7 +107,7 @@ author:
   avatar           :  "/assets/images/bio-photo.jpg"
   bio              :  "Hi, I am an 4th year physics major at University of Virginia interested in gravity. I'm still working on this site."
   location         :  "Charlottesville, Virginia"
-  email            :
+  email            : #Seymour.Brianc@gmail.com
   links:
     - label:          "Email"
       icon:           "fas fa-fw fa-envelope-square"
@@ -127,6 +127,10 @@ author:
     - label:          "Instagram"
       icon:           "fab fa-fw fa-instagram"
       # url:          "https://instagram.com/"
+    - label:          "Linkedin"
+      icon:           "fab fa-fw fa-linkedin"
+      url:            "https://www.linkedin.com/in/seymour-brianc/"
+
 
 # Site Footer
 footer:
