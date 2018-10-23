@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "github-pages", group: :jekyll_plugins
-
+ 
 # To upgrade, run `bundle update`.
 
 # gem "jekyll", "~> 3.5"
