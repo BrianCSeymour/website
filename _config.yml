@@ -98,7 +98,7 @@ social:
 #     tracking_id          :
 #     anonymize_ip         : # true, false (default)
 analytics:
-  provider: "google"
+  provider: "google-gtag"
   google:
     tracking_id: "UA-127994944-1"
     anonymize_ip: false # default
