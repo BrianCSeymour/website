@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "github-pages", group: :jekyll_plugins
- 
+
 # To upgrade, run `bundle update`.
 
 # gem "jekyll", "~> 3.5"
@@ -24,6 +24,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jemoji"
 #   gem "jekyll-data"
    # gem  "jekyll-archives"
+   gem 'jekyll-seo-tag'
    gem 'jekyll-font-awesome-sass'
    gem "jekyll-include-cache"
 #
