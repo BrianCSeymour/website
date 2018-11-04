@@ -98,10 +98,10 @@ social:
 #     tracking_id          :
 #     anonymize_ip         : # true, false (default)
 analytics:
-  provider: "google-gtag"
+  provider:           "google-gtag"
   google:
-    tracking_id: "UA-127994944-1"
-    anonymize_ip: false # default
+    tracking_id:      "UA-127994944-1"
+    anonymize_ip:     false # default
 
 
 
@@ -111,7 +111,7 @@ author:
   avatar           :  "/assets/images/bio-photo.jpg"
   bio              :  "4th year physics major at University of Virginia. I study general relativity, tests of modified gravity theories, and gravitational waves."
   location         :  "Charlottesville, Virginia"
-  email            : #Seymour.Brianc@gmail.com
+  email            :  #Seymour.Brianc@gmail.com
   links:
     - label:          "Email"
       icon:           "fas fa-fw fa-envelope-square"
@@ -232,6 +232,7 @@ timezone:             # https://en.wikipedia.org/wiki/List_of_tz_database_time_z
 # Plugins (previously gems:)
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

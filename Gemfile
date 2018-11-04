@@ -25,6 +25,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jekyll-data"
    # gem  "jekyll-archives"
    gem 'jekyll-seo-tag'
+   gem 'jekyll-sitemap'
    gem 'jekyll-font-awesome-sass'
    gem "jekyll-include-cache"
 #
