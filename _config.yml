@@ -71,7 +71,8 @@ google:
   search_engine_id       : "003732790700920012529:ljstz8wqz-s" # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google-site-verification : "viWRO4rghh7bxs3F9eQvDrcv4kCXk5X-Afg9GwfG_VQ"
+# google-site-verification : "viWRO4rghh7bxs3F9eQvDrcv4kCXk5X-Afg9GwfG_VQ"
+google-site-verification : googledd44fb2813149dcf.html
 bing_site_verification   : "0FC3FD70512616B052E755A56F8952D"
 yandex_site_verification : "2132801JL"
 naver_site_verification  :
