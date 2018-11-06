@@ -23,7 +23,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jekyll-feed"
 #   gem "jemoji"
 #   gem "jekyll-data"
-   # gem  "jekyll-archives"
+   # gem 'jekyll-archives'
    gem 'jekyll-seo-tag'
    gem 'jekyll-sitemap'
    gem 'jekyll-font-awesome-sass'
