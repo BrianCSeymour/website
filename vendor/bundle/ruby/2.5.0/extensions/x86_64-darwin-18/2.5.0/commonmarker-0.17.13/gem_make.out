@@ -1,5 +1,5 @@
 current directory: /Users/brian/Cloud-Files/GitHub/website/vendor/bundle/ruby/2.5.0/gems/commonmarker-0.17.13/ext/commonmarker
-/usr/local/opt/ruby/bin/ruby -r ./siteconf20181121-68073-1rkhlgb.rb extconf.rb
+/usr/local/opt/ruby/bin/ruby -r ./siteconf20181121-85385-18fry9m.rb extconf.rb
 creating Makefile
 
 current directory: /Users/brian/Cloud-Files/GitHub/website/vendor/bundle/ruby/2.5.0/gems/commonmarker-0.17.13/ext/commonmarker
@@ -118,4 +118,4 @@ linking shared-object commonmarker/commonmarker.bundle
 
 current directory: /Users/brian/Cloud-Files/GitHub/website/vendor/bundle/ruby/2.5.0/gems/commonmarker-0.17.13/ext/commonmarker
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20181121-68073-1343zu8/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20181121-85385-1wa91nk/commonmarker
