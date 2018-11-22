@@ -236,7 +236,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji

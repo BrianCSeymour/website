@@ -1,5 +1,5 @@
 current directory: /Users/brian/Cloud-Files/GitHub/website/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
-/usr/local/opt/ruby/bin/ruby -r ./siteconf20181121-41995-n50lif.rb extconf.rb
+/usr/local/opt/ruby/bin/ruby -r ./siteconf20181121-68073-l0cjtf.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... no
 checking for shlwapi.h... no
@@ -133,4 +133,4 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
 ld: warning: could not create compact unwind for _ffi_call_unix64: does not use RBP or RSP based frame
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20181121-41995-105evky
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20181121-68073-1bko9ty

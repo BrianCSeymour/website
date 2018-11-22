@@ -17,14 +17,14 @@ gem "github-pages", group: :jekyll_plugins
 gem 'minimal-mistakes-jekyll'
 
 # The following plugins are automatically loaded by the theme-gem:
-#   gem "jekyll-paginate"
-#   gem "jekyll-sitemap"
-#   gem "jekyll-gist"
-#   gem "jekyll-feed"
-#   gem "jemoji"
+   gem "jekyll-paginate"
+   gem "jekyll-sitemap"
+   gem "jekyll-gist"
+   gem "jekyll-feed"
+   gem "jemoji"
 #   gem "jekyll-data"
    # gem 'jekyll-archives'
-   gem 'jekyll-seo-tag'
+   # gem 'jekyll-seo-tag'
    gem 'jekyll-sitemap'
    gem 'jekyll-font-awesome-sass'
    gem 'jekyll-include-cache'
