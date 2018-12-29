@@ -10,8 +10,8 @@ main:
      url: /presentations/
    - title: "Publications"
      url: /publications/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Resources"
+    url:  /resources/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
