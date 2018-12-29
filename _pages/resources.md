@@ -6,9 +6,9 @@ title: "Resources"
 tags:
 permalink: /resources/
 ---
-## helpful links:
-* [SPS page at UVA](https://spsatuva.github.io/)
+## Useful Links:
+* Society of Physics Students [Website](https://spsatuva.github.io/) at University of Virginia.
 
-## Colleague Website
-* [Matt Walker, graduate student at UVA](https://mathwalker.com/)  
-* [Steven Stetzler, graduate student at UWash](https://stevenstetzler.com/)
+## Colleague Websites:
+* [Matt Walker](https://mathwalker.com/), graduate student at University of Virginia.  
+* [Steven Stetzler](https://stevenstetzler.com/), graduate student at University of Washington.
