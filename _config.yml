@@ -135,6 +135,9 @@ author:
     - label:          "Linkedin"
       icon:           "fab fa-fw fa-linkedin"
       url:            "https://www.linkedin.com/in/briancseymour/"
+    - label:          "Linkedin"
+      icon:           "fab fa-fw fa-quora"
+      url:            "https://www.quora.com/profile/Brian-C-Seymour"
 
 
 # Site Footer
