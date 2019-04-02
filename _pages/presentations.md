@@ -8,6 +8,7 @@ permalink: /presentations/
 ---
 ## Tests of Gravity
 
+*  B. Seymour, and K. Yagi. "[Black Hole-Pulsar Binary Tests of Gravity](http://meetings.aps.org/Meeting/APR19/Session/D16.7)," American Physical Society April Meeting. April 13, 2019. Denver, CO. (Oral)
 *  B. Seymour, and K. Yagi. "[Testing General Relativity with Black Hole-Pulsar Binaries]({{ site.baseurl }}/Sigma-Pi-Sigma-Presentation)," Society of Physics Students 8th Annual Undergraduate Physics Research Symposium. November 9, 2018. Charlottesville, VA. (Oral)
 *  B. Seymour, and K. Yagi. "[Testing General Relativity with Black Hole-Pulsar Binaries]({{site.baseurl}}/Gravity-Group-Meeting)," Gravity Group Meeting. November 1, 2018. Charlottesville, VA. (Oral)
 *  B. Seymour, and K. Yagi. "[Testing General Relativity with Black Hole-Pulsar Binaries]({{site.baseurl}}/CSS-Poster)," Fall College Science Scholar Symposium. October 17, 2018. Charlottesville, VA. (Poster)
