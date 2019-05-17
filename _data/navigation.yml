@@ -5,7 +5,7 @@ main:
    - title: "About"
      url: /about/
    - title: "CV"
-     url: /assets/documents/CV_BrianSeymour.pdf
+     url: /assets/documents/CV.pdf
    - title: "Presentations"
      url: /presentations/
    - title: "Publications"
