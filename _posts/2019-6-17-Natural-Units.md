@@ -5,6 +5,7 @@ usemathjax: true
 ---
 
 ### Introduction and Review
+
 Natural units are a way to simplify repetitive fundamental constants in theoretical physics equations. In my research, I used three particular unit systems: geometric ($c=G=1$), natural ($c=\hbar=1$), and Planck units ($c=\hbar=G=1$). However, for me it is time consuming to convert to and from natural units. I decided that I would write an extension to Mathematica's units package to remedy this.
 
 A great summary of natural units goes in more detail in an excellent document [here](https://www.seas.upenn.edu/~amyers/NaturalUnits.pdf). Given a SI quantity $Q_{\text{SI}}$, the quantity in natural units is given by $Q_{\text{geometric}} = Q_{\text{SI}}/A$ for some factor $A$. For the rest of this post, I will use geometric units. Suppose that the quantity has SI units of the form
