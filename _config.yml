@@ -110,8 +110,8 @@ analytics:
 author:
   name             :  "Brian C. Seymour"
   avatar           :  "/assets/images/bio-photo.jpg"
-  bio              :  "Theoretical physicist doing Part III Maths student at University of Cambridge. I study general relativity, tests of modified gravity theories, and gravitational waves."
-  location         :  "Charlottesville, Virginia"
+  bio              :  "Theoretical physicist and PhD student at California Institute of Technology. I study general relativity, tests of modified gravity theories, and gravitational waves."
+  location         :  "Pasadena, California"
   email            :  #Seymour.Brianc@gmail.com
   links:
     - label:          "Email"
