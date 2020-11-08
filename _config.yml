@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Brian C. Seymour "
 title_separator          : "-"
 name                     : "Brian C. Seymour"
-description              : "The personal website and blog of Brian Seymour. I am a theoretical physicist doing Part III Maths at University of Cambridge. I study general relativity, tests of modified gravity theories, and gravitational waves. "
+description              : "The personal website and blog of Brian Seymour. I am a physics PhD student at Caltech. I study general relativity, tests of modified gravity theories, and gravitational waves. "
 url                      : "https://www.briancseymour.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"/website" # the subpath of your site, e.g. "/blog"
 repository               : "BrianCSeymour/website" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -110,7 +110,7 @@ analytics:
 author:
   name             :  "Brian C. Seymour"
   avatar           :  "/assets/images/bio-photo.jpg"
-  bio              :  "Theoretical physicist and PhD student at California Institute of Technology. I study general relativity, tests of modified gravity theories, and gravitational waves."
+  bio              :  "Physics PhD student at Caltech. I study general relativity, tests of modified gravity theories, and gravitational waves."
   location         :  "Pasadena, California"
   email            :  #Seymour.Brianc@gmail.com
   links:
