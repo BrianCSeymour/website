@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Comparison of Spherical Harmonics that are Used in GR"
+title:  "Visualizing Spin-Weighted Spherical Harmonics"
 usemathjax: true
 ---
 
