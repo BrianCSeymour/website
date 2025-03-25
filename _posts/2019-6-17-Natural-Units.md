@@ -2,6 +2,7 @@
 layout: posts
 title:  "Automated Natural Unit Conversions in Mathematica"
 usemathjax: true
+excerpt: "A simple Mathematica extension to automate conversions between SI and natural units like geometric, natural, and Planck systems."
 ---
 
 ### Introduction and Review
