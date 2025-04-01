@@ -3,6 +3,7 @@ layout: posts
 title:  "Calculation of Volatility Decay"
 usemathjax: true
 excerpt: "The relationship between geometric random walks and how volatility reduces earnings"
+published: false
 ---
 
 ### Derivation of Volatility Decay
