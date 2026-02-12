@@ -110,8 +110,8 @@ analytics:
 author:
   name             :  "Brian C. Seymour"
   avatar           :  "/assets/images/bio-photo.jpg"
-  bio              :  "Physics PhD student at Caltech. I study general relativity, tests of modified gravity theories, and gravitational waves."
-  location         :  "Pasadena, California"
+  bio              :  "Physics postdoc at Niels Bohr Institute. I study general relativity, tests of modified gravity theories, and gravitational waves."
+  location         :  "Copenhagen, Denmark"
   email            :  #Seymour.Brianc@gmail.com
   links:
     - label:          "Email"
