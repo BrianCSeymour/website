@@ -34,7 +34,7 @@ group :jekyll_plugins do
     gem 'jekyll-include-cache'
 
     # If you have any other plugins, put them here!
-    # gem "jekyll-scholar", "~> 7.0"
+    gem "jekyll-scholar", "~> 7.0"
 end
 
 gem "faraday-retry", "~> 2.2"

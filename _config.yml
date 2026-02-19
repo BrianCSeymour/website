@@ -245,8 +245,55 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
-  # - jekyll-scholar
+  - jekyll-scholar
   # - jekyll-archives
+
+# # Configure scholar settings
+# scholar:  
+#   last_name: [Seymour]
+#   first_name: [Brian, B.]
+#   style: apa
+#   locale: en
+
+#   source: ./_bibliography
+#   bibliography: references.bib
+#   bibliography_template: bib
+
+#   bibtex_filters: [latex, smallcaps, superscript]
+
+#   replace_strings: true
+#   join_strings: true
+
+#   details_dir: bibliography
+#   details_layout: bibtex.html
+#   details_link: Details
+
+#   query: "@*"
+#   group_by: year
+#   group_order: descending
+scholar:
+  last_name: [Seymour]
+  first_name: [Brian, B.]
+
+  style: apa
+  locale: en
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: bib
+
+  bibtex_filters: [latex, smallcaps, superscript]
+
+  replace_strings: true
+  join_strings: true
+
+  # details_dir: bibliography
+  # details_layout: bibtex.html
+  # details_link: Details
+
+  # query: "@*"
+  # group_by: year
+  # group_order: descending
 
 
 
