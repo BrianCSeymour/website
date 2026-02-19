@@ -1,0 +1,20 @@
+---
+---
+<div style="margin-bottom: 15px;">
+  <span>{{ entry.author }}.</span>
+
+  <span>“{{ entry.title }}.”</span>
+
+  {% if entry.doi %}
+    <a href="https://doi.org/{{ entry.doi }}" style="color: #494e52; text-decoration: none; border-bottom: 1px dotted #494e52;">
+      <em>{{ entry.journal }}</em> <b>{{ entry.volume }}</b>, {{ entry.pages }} ({{ entry.year }})</a>.
+  {% else %}
+    <em>{{ entry.journal }}</em> <b>{{ entry.volume }}</b>, {{ entry.pages }} ({{ entry.year }}).
+  {% endif %}
+
+  {% if entry.eprint %}
+    <a href="https://arxiv.org/abs/{{ entry.eprint }}" style="color: #7e95ae; text-decoration: none;">arXiv:{{ entry.eprint }}</a>.
+  {% elsif entry.arxiv %}
+    <a href="https://arxiv.org/abs/{{ entry.arxiv }}" style="color: #7e95ae; text-decoration: none;">arXiv:{{ entry.arxiv }}</a>.
+  {% endif %}
+</div>
