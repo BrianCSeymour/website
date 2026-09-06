@@ -57,12 +57,12 @@ $base0f: #b49368;
 }
 
 h2.bibliography {
-  margin-top: 2em;
-  padding-bottom: 0.25em;
+  margin: 1.5em 0 0.25em;
+  padding-bottom: 0.15em;
   border-bottom: 1px solid $border-color;
-  font-size: $type-size-3;
+  font-size: $type-size-4;
   font-weight: normal;
-  &:first-of-type { margin-top: 1em; }
+  &:first-of-type { margin-top: 0.75em; }
 }
 
 ol.bibliography {
@@ -78,28 +78,26 @@ ol.bibliography {
 
 .pub {
   display: flex;
-  gap: 1.25em;
+  gap: 1em;
   align-items: flex-start;
-  padding: 1.25em 0;
-  border-bottom: 1px solid $border-color;
-  li:last-child > & { border-bottom: 0; }
+  padding: 0.6em 0;
 }
 
 .pub__side {
-  flex: 0 0 8.5em;
+  flex: 0 0 6.5em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.4em;
+  gap: 0.3em;
 }
 
 .pub__badge {
   display: inline-block;
-  padding: 0.15em 0.9em;
+  padding: 0.05em 0.7em;
   border-radius: 3px;
   background-color: $muted-text-color;
   color: #fff;
-  font-size: $type-size-7;
+  font-size: 0.65em;
   font-weight: bold;
   letter-spacing: 0.03em;
   a, a:visited { color: #fff; text-decoration: none; }
@@ -115,12 +113,12 @@ ol.bibliography {
 .pub__body {
   flex: 1 1 auto;
   min-width: 0;
-  font-size: $type-size-5;
-  line-height: 1.5;
+  font-size: $type-size-6;
+  line-height: 1.4;
 }
 
 .pub__title {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .pub__self {
@@ -148,19 +146,20 @@ ol.bibliography {
 .pub__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
-  margin-top: 0.6em;
+  gap: 0.4em;
+  margin-top: 0.35em;
 }
 
 .pub__btn {
   display: inline-block;
-  padding: 0.25em 1em;
+  padding: 0.1em 0.7em;
   border: 1px solid $text-color;
   border-radius: 3px;
   background: none;
   color: $text-color;
   font: inherit;
-  font-size: $type-size-7;
+  font-size: 0.7em;
+  line-height: 1.6;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-decoration: none;
@@ -175,12 +174,12 @@ ol.bibliography {
 }
 
 .pub__bibtex {
-  margin-top: 0.75em;
-  pre { margin: 0; font-size: $type-size-7; }
+  margin-top: 0.5em;
+  pre { margin: 0; font-size: 0.75em; }
 }
 
 @include breakpoint(max-width $small) {
-  .pub { flex-direction: column; gap: 0.6em; }
+  .pub { flex-direction: column; gap: 0.4em; }
   .pub__side { flex-direction: row; align-items: center; }
-  .pub__preview { width: 6em; }
+  .pub__preview { width: 5em; }
 }
