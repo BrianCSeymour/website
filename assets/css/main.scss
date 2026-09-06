@@ -47,3 +47,140 @@ $base0f: #b49368;
   .page__meta-sep { display: none; }
   .page__meta-readtime { margin-left: auto; }
 }
+
+/* ==========================================================================
+   Publications list (jekyll-scholar + _layouts/bib.html), al-folio style
+   ========================================================================== */
+.pub__intro {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+}
+
+h2.bibliography {
+  margin-top: 2em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid $border-color;
+  font-size: $type-size-3;
+  font-weight: normal;
+  &:first-of-type { margin-top: 1em; }
+}
+
+ol.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pub {
+  display: flex;
+  gap: 1.25em;
+  align-items: flex-start;
+  padding: 1.25em 0;
+  border-bottom: 1px solid $border-color;
+  li:last-child > & { border-bottom: 0; }
+}
+
+.pub__side {
+  flex: 0 0 8.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4em;
+}
+
+.pub__badge {
+  display: inline-block;
+  padding: 0.15em 0.9em;
+  border-radius: 3px;
+  background-color: $muted-text-color;
+  color: #fff;
+  font-size: $type-size-7;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  a, a:visited { color: #fff; text-decoration: none; }
+}
+
+.pub__preview {
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.pub__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: $type-size-5;
+  line-height: 1.5;
+}
+
+.pub__title {
+  font-weight: bold;
+}
+
+.pub__self {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.pub__more-toggle {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  font: inherit;
+  color: $muted-text-color;
+  cursor: pointer;
+  border-bottom: 1px dashed $muted-text-color;
+  &:hover { color: $text-color; border-bottom-color: $text-color; }
+}
+
+.pub__venue {
+  em { font-style: italic; }
+}
+
+.pub__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 0.6em;
+}
+
+.pub__btn {
+  display: inline-block;
+  padding: 0.25em 1em;
+  border: 1px solid $text-color;
+  border-radius: 3px;
+  background: none;
+  color: $text-color;
+  font: inherit;
+  font-size: $type-size-7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $global-transition;
+  &:visited { color: $text-color; }
+  &:hover {
+    background-color: $text-color;
+    color: $background-color;
+    text-decoration: none;
+  }
+}
+
+.pub__bibtex {
+  margin-top: 0.75em;
+  pre { margin: 0; font-size: $type-size-7; }
+}
+
+@include breakpoint(max-width $small) {
+  .pub { flex-direction: column; gap: 0.6em; }
+  .pub__side { flex-direction: row; align-items: center; }
+  .pub__preview { width: 6em; }
+}

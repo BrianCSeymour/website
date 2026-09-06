@@ -255,7 +255,7 @@ plugins:
 # # Configure scholar settings
 # scholar:  
 #   last_name: [Seymour]
-#   first_name: [Brian, B.]
+#   first_name: [Brian, B., Brian C., Brian Christopher]
 #   style: apa
 #   locale: en
 
@@ -277,7 +277,7 @@ plugins:
 #   group_order: descending
 scholar:
   last_name: [Seymour]
-  first_name: [Brian, B.]
+  first_name: [Brian, B., Brian C., Brian Christopher]
 
   style: apa
   locale: en
@@ -295,9 +295,15 @@ scholar:
   # details_layout: bibtex.html
   # details_link: Details
 
-  # query: "@*"
-  # group_by: year
-  # group_order: descending
+  query: "@*"
+  group_by: year
+  group_order: descending
+  # Skip these fields when printing the raw BibTeX behind the "Bib" button
+  bibtex_skip_fields: [abstract, month_numeric, bibtex_show, abbr, preview, pdf, code, slides, website, html]
+
+# Publication list (see _layouts/bib.html)
+max_author_limit: 4              # collapse author lists longer than this
+enable_publication_thumbnails: true
 
 
 
