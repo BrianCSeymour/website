@@ -228,6 +228,9 @@ kramdown:
 sass:
   sass_dir:           _sass
   style:              compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  # the theme's vendored Sass (susy, breakpoint, mixins) uses syntax Dart Sass now
+  # warns about; the warnings are harmless, so keep the build log readable
+  silence_deprecations: [import, slash-div, color-functions, if-function, global-builtin, function-units, abs-percent]
 
 
 # Outputting
