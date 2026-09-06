@@ -26,6 +26,7 @@ repository               : "BrianCSeymour/website" # GitHub username/repo-name e
 teaser                   : "/assets/images/GW.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
+date_format              : "%B %-d, %Y"
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
@@ -355,6 +356,7 @@ defaults:
       layout:         single
       author_profile: true
       read_time:      true
+      show_date:      true
       comments:       true
       share:          true
       related:        true

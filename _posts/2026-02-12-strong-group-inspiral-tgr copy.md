@@ -1,7 +1,7 @@
 ---
-layout: posts
+layout: single
 title:  "Strong group talk about inspiral tests of general relativity with GW"
-published: false
+published: true
 ---
 
 

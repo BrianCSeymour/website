@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title:  "LIGO SURF talk about tests of general relativity with LIGO"
 ---
 
