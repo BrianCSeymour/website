@@ -1,0 +1,31 @@
+{%- comment -%}
+Embeds the interactive SEOBNRv5 waveform explorer (assets/interactive/waveform-explorer.html).
+Optional parameter: include.hash — initial state, e.g. "q=3&ce=0.5&cp=0&rq=1&rce=0&rcp=0&view=mode&inc=0&win=late".
+Links with class "wfx-try" and an href of "#<state>" re-drive the embedded explorer.
+{%- endcomment -%}
+{%- assign wfx_hash = include.hash | default: "q=3&ce=0.5&cp=0&rq=1&rce=0&rcp=0&view=mode&inc=0&win=late" -%}
+<p class="wfx-fullscreen"><a href="{{ site.baseurl }}/assets/interactive/waveform-explorer.html#{{ wfx_hash }}" target="_blank" rel="noopener">Open the explorer full-screen &#8599;</a></p>
+<iframe id="wfx" class="wfx-frame" src="{{ site.baseurl }}/assets/interactive/waveform-explorer.html#{{ wfx_hash }}" title="Interactive SEOBNRv5 waveform explorer"></iframe>
+<style>
+.wfx-frame{width:100%;height:1100px;border:0;border-radius:10px;background:#f4f4f7;display:block;margin:0 0 1.5em}
+.wfx-fullscreen{text-align:right;margin:0 0 .4em;font-size:.85em}
+a.wfx-try{font-weight:700}
+a.wfx-try::before{content:"\25B6\00a0";font-size:.75em}
+</style>
+<script>
+(function(){
+  var frame = document.getElementById("wfx");
+  window.addEventListener("message", function(e){
+    if (e.data && e.data.type === "waveform-explorer-height" && e.data.height > 400)
+      frame.style.height = (e.data.height + 4) + "px";
+  });
+  document.querySelectorAll("a.wfx-try").forEach(function(a){
+    a.addEventListener("click", function(ev){
+      ev.preventDefault();
+      try { frame.contentWindow.location.hash = a.getAttribute("href").slice(1); }
+      catch (err) { frame.src = frame.src.split("#")[0] + a.getAttribute("href"); }
+      frame.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+})();
+</script>
