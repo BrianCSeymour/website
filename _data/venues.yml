@@ -1,0 +1,24 @@
+# Journal badge colors and links used by _layouts/bib.html (abbr field in the .bib file)
+"PRL":
+  url: https://journals.aps.org/prl/
+  color: "#9E1A00"
+
+"PRD":
+  url: https://journals.aps.org/prd/
+  color: "#467e91"
+
+"PRX":
+  url: https://journals.aps.org/prx/
+  color: "#00849E"
+
+"CQG":
+  url: https://iopscience.iop.org/journal/0264-9381
+  color: "#5b6c8f"
+
+"ApJ":
+  url: https://iopscience.iop.org/journal/0004-637X
+  color: "#3c5492"
+
+"Thesis":
+  url: https://thesis.library.caltech.edu/
+  color: "#7a7a7a"

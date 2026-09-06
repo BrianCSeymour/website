@@ -1,20 +1,115 @@
 ---
 ---
-<div style="margin-bottom: 15px;">
-  <span>{{ entry.author }}.</span>
+{%- comment -%}
+Publication entry template for jekyll-scholar, modelled on al-folio's bib.html
+but written with Minimal Mistakes markup/CSS (see .pub rules in assets/css/main.scss).
 
-  <span>“{{ entry.title }}.”</span>
+Optional fields on each .bib entry:
+  abbr        journal badge, coloured via _data/venues.yml   (e.g. abbr = {PRD})
+  preview     thumbnail in assets/images/publication_preview/ (e.g. preview = {foo.png})
+  bibtex_show show a BIB button that reveals the raw BibTeX
+  eprint      arXiv identifier -> ARXIV button
+  doi         DOI -> HTML button
+  pdf/code/slides/website  extra buttons (URL, or file under /assets/pdf/)
+{%- endcomment -%}
+{%- assign venue = site.data.venues[entry.abbr] -%}
+{%- capture badge -%}
+  {%- if entry.abbr -%}
+    <span class="pub__badge"{% if venue.color %} style="background-color: {{ venue.color }}"{% endif %}>
+      {%- if venue.url -%}<a href="{{ venue.url }}">{{ entry.abbr }}</a>{%- else -%}{{ entry.abbr }}{%- endif -%}
+    </span>
+  {%- endif -%}
+{%- endcapture -%}
+<div class="pub" id="{{ entry.key }}">
+  <div class="pub__side">
+    {{ badge }}
+    {%- if entry.preview and entry.preview != "none" -%}
+      {%- if entry.preview contains '://' -%}
+        <img class="pub__preview" src="{{ entry.preview }}" alt="">
+      {%- else -%}
+        <img class="pub__preview" src="{{ entry.preview | prepend: '/assets/images/publication_preview/' | relative_url }}" alt="">
+      {%- endif -%}
+    {%- endif -%}
+  </div>
 
-  {% if entry.doi %}
-    <a href="https://doi.org/{{ entry.doi }}" style="color: #494e52; text-decoration: none; border-bottom: 1px dotted #494e52;">
-      <em>{{ entry.journal }}</em> <b>{{ entry.volume }}</b>, {{ entry.pages }} ({{ entry.year }})</a>.
-  {% else %}
-    <em>{{ entry.journal }}</em> <b>{{ entry.volume }}</b>, {{ entry.pages }} ({{ entry.year }}).
-  {% endif %}
+  <div class="pub__body">
+    <div class="pub__title">{{ entry.title }}</div>
 
-  {% if entry.eprint %}
-    <a href="https://arxiv.org/abs/{{ entry.eprint }}" style="color: #7e95ae; text-decoration: none;">arXiv:{{ entry.eprint }}</a>.
-  {% elsif entry.arxiv %}
-    <a href="https://arxiv.org/abs/{{ entry.arxiv }}" style="color: #7e95ae; text-decoration: none;">arXiv:{{ entry.arxiv }}</a>.
-  {% endif %}
+    <div class="pub__authors">
+      {%- assign n_authors = entry.author_array | size -%}
+      {%- assign limit = n_authors -%}
+      {%- if site.max_author_limit and n_authors > site.max_author_limit -%}
+        {%- assign limit = site.max_author_limit -%}
+      {%- endif -%}
+      {%- assign first_hidden = limit | plus: 1 -%}
+      {%- for author in entry.author_array -%}
+        {%- assign clean_last = author.last | remove: "*" | remove: "†" | remove: "‡" | remove: "^" | strip -%}
+        {%- capture name -%}
+          {%- if site.scholar.last_name contains clean_last -%}
+            <span class="pub__self">{{ author.first }} {{ author.last }}</span>
+          {%- else -%}
+            {{ author.first }} {{ author.last }}
+          {%- endif -%}
+        {%- endcapture -%}
+        {%- if forloop.index == first_hidden -%}<span class="pub__more" hidden>{%- endif -%}
+        {%- comment -%} separator before this author {%- endcomment -%}
+        {%- if forloop.index == 1 -%}
+        {%- elsif forloop.last and n_authors == 2 -%}{{ " and " }}
+        {%- else -%}{{ ", " }}{%- if forloop.last -%}{{ "and " }}{%- endif -%}
+        {%- endif -%}
+        {{- name -}}
+        {%- if forloop.last and n_authors > limit -%}</span>{%- endif -%}
+      {%- endfor -%}
+      {%- assign hidden_authors = n_authors | minus: limit -%}
+      {%- if hidden_authors > 0 -%}
+        <span class="pub__more-wrap">, and <button type="button" class="pub__more-toggle" onclick="var w=this.parentElement; w.previousElementSibling.hidden=false; w.hidden=true;">{{ hidden_authors }} more author{% if hidden_authors > 1 %}s{% endif %}</button></span>
+      {%- endif -%}
+    </div>
+
+    {%- assign proceedings = "inproceedings,incollection" | split: "," -%}
+    {%- assign theses = "thesis,mastersthesis,phdthesis" | split: "," -%}
+    {%- capture venue_text -%}
+      {%- if entry.type == "article" and entry.journal -%}<em>{{ entry.journal }}</em>
+      {%- elsif proceedings contains entry.type -%}<em>In {{ entry.booktitle }}</em>
+      {%- elsif theses contains entry.type -%}<em>PhD thesis, {{ entry.school }}</em>
+      {%- endif -%}
+    {%- endcapture -%}
+    {%- capture date_text -%}
+      {%- if entry.month -%}{{ entry.month | capitalize }} {% endif -%}{{ entry.year }}
+    {%- endcapture -%}
+    <div class="pub__venue">
+      {%- if venue_text != "" -%}{{ venue_text }}, {% endif -%}{{ date_text }}
+      {%- if entry.note -%} &middot; {{ entry.note }}{%- endif -%}
+    </div>
+
+    <div class="pub__links">
+      {%- if entry.eprint -%}
+        <a class="pub__btn" href="https://arxiv.org/abs/{{ entry.eprint }}">arXiv</a>
+      {%- elsif entry.arxiv -%}
+        <a class="pub__btn" href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>
+      {%- endif -%}
+      {%- if entry.bibtex_show -%}
+        <button type="button" class="pub__btn" onclick="var b=this.closest('.pub').querySelector('.pub__bibtex'); b.hidden=!b.hidden;">Bib</button>
+      {%- endif -%}
+      {%- if entry.doi -%}
+        <a class="pub__btn" href="https://doi.org/{{ entry.doi }}">HTML</a>
+      {%- elsif entry.html -%}
+        <a class="pub__btn" href="{{ entry.html }}">HTML</a>
+      {%- endif -%}
+      {%- if entry.pdf -%}
+        <a class="pub__btn" href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">PDF</a>
+      {%- endif -%}
+      {%- if entry.code -%}<a class="pub__btn" href="{{ entry.code }}">Code</a>{%- endif -%}
+      {%- if entry.slides -%}
+        <a class="pub__btn" href="{% if entry.slides contains '://' %}{{ entry.slides }}{% else %}{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}{% endif %}">Slides</a>
+      {%- endif -%}
+      {%- if entry.website -%}<a class="pub__btn" href="{{ entry.website }}">Website</a>{%- endif -%}
+    </div>
+
+    {%- if entry.bibtex_show -%}
+    <div class="pub__bibtex" hidden>
+{% highlight bibtex %}{{ entry.bibtex }}{% endhighlight %}
+    </div>
+    {%- endif -%}
+  </div>
 </div>
