@@ -27,3 +27,23 @@ $base0f: #b49368;
 
 
 @import "minimal-mistakes"; // main partials
+
+/* Post titles in archive lists (home, post index): plain bold text like the
+   "You may also enjoy" cards, not blue underlined links. */
+.archive__item-title a,
+.archive__item-title a:visited {
+  color: $text-color;
+  text-decoration: none;
+}
+.archive__item-title a:hover {
+  text-decoration: underline;
+}
+
+/* Archive lists: date on the left, reading time flush right. */
+.archive__item .page__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  .page__meta-sep { display: none; }
+  .page__meta-readtime { margin-left: auto; }
+}
