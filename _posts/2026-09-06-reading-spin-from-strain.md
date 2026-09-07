@@ -7,7 +7,7 @@ classes: wide
 author_profile: true
 published: false
 header:
-  teaser: /assets/images/waveform-explorer-teaser.png
+  teaser: /assets/images/teasers/2026-09-06-reading-spin-from-strain.png
 ---
 
 Every binary black hole radiates the same basic chirp, so the parameters we measure have to be

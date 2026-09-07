@@ -4,7 +4,7 @@ title:  "Visualizing Spin-Weighted Spherical Harmonics"
 usemathjax: true
 excerpt: "A quick visual tour of spin-weighted spherical and spheroidal harmonics in GR, using the BHPT toolkit."
 header:
-  teaser: /assets/images/spherical-harmonics-GR.png
+  teaser: /assets/images/teasers/2024-10-16-Spherical-Harmonics.png
 ---
 
 ### Introduction and Review
