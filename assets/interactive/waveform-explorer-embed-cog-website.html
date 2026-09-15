@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embedding example: waveform explorer</title>
+<style>
+  body{margin:0;font-family:system-ui,sans-serif;line-height:1.5;color:#222;background:#fff}
+  main{max-width:960px;margin:0 auto;padding:32px 20px 64px}
+  h1{font-size:1.6em;margin:0 0 .3em}
+  p.lead{color:#555;margin-top:0}
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;padding:0;list-style:none}
+  .presets a{display:inline-block;padding:6px 12px;border:1px solid #ccc;border-radius:999px;text-decoration:none;color:#1a5fb4}
+  .presets a:hover{background:#eef3fb}
+  iframe.wfx{width:100%;height:1100px;border:0;border-radius:10px;background:#f4f4f7;display:block}
+  pre{background:#f4f4f7;padding:12px;border-radius:8px;overflow-x:auto;font-size:.85em}
+</style>
+</head>
+<body>
+<main>
+  <h1>Embedding the interactive waveform explorer</h1>
+  <p class="lead">This page is an example of a third-party site embedding the explorer built by <strong>Brian Seymour</strong> and hosted at
+    <a href="https://www.briancseymour.com/reading-spin-from-strain/">briancseymour.com</a>.
+    Everything below the presets is a plain <code>&lt;iframe&gt;</code>.</p>
+
+  <p>Optional preset links. Changing the hash of the frame re-drives the explorer without a reload:</p>
+  <ul class="presets">
+    <li><a class="wfx-try" href="#q=1&ce=0&cp=0&rq=1&rce=0&rcp=0&view=mode&inc=0&win=late">Equal mass, no spin</a></li>
+    <li><a class="wfx-try" href="#q=3&ce=0.5&cp=0&rq=1&rce=0&rcp=0&view=mode&inc=0&win=late">q = 3, aligned spin</a></li>
+    <li><a class="wfx-try" href="#q=3&ce=0&cp=8&rq=3&rce=0&rcp=0&view=mode&inc=60&win=late">Strongly precessing, inclined</a></li>
+  </ul>
+
+  <!-- 1. The embed itself. The hash sets the initial state. -->
+  <iframe id="wfx" class="wfx"
+    src="https://www.briancseymour.com/assets/interactive/waveform-explorer.html#q=3&ce=0.5&cp=0&rq=1&rce=0&rcp=0&view=mode&inc=0&win=late"
+    title="Interactive SEOBNRv5 waveform explorer"
+    loading="lazy"></iframe>
+
+  <!-- 2. Optional: auto-size the frame and wire the preset links. -->
+  <script>
+  (function () {
+    var frame = document.getElementById("wfx");
+    window.addEventListener("message", function (e) {
+      if (e.data && e.data.type === "waveform-explorer-height" && e.data.height > 400)
+        frame.style.height = (e.data.height + 4) + "px";
+    });
+    document.querySelectorAll("a.wfx-try").forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        // Cross-origin: we cannot touch contentWindow.location, so reassign src with the new hash.
+        frame.src = frame.src.split("#")[0] + a.getAttribute("href");
+        frame.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  })();
+  </script>
+
+  <h2>Minimal version</h2>
+  <p>If you do not want presets or auto-sizing, this is all that is needed:</p>
+<pre>&lt;iframe
+  src="https://www.briancseymour.com/assets/interactive/waveform-explorer.html#q=3&amp;ce=0.5&amp;cp=0&amp;rq=1&amp;rce=0&amp;rcp=0&amp;view=mode&amp;inc=0&amp;win=late"
+  title="Interactive SEOBNRv5 waveform explorer"
+  style="width:100%;height:1100px;border:0"
+  loading="lazy"&gt;&lt;/iframe&gt;</pre>
+</main>
+</body>
+</html>
