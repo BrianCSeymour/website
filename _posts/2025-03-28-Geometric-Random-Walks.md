@@ -30,4 +30,4 @@ I find both the spin-weighted spherical/spheroidal harmonics buy using the black
 
 Below, I make an image which shows how each of them look. I did this for spherocity parameter $\gamma = \omega \chi \sim 0.7$. You can see that the spheroidal harmonics have preferential radiation in the upward direction comparing $m=-2$ vs $m=2$. This is because the retrograde mode is weaker, and has a different QNM frequency than the prograde one (slower frequency and similar damping rate).
 
-![Alt text](/assets/images/spherical-harmonics-GR.png){: .align-center .responsive}
+![Alt text](/assets/images/teasers/2024-10-16-Spherical-Harmonics.png){: .align-center .responsive}
